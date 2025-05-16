@@ -1,0 +1,14 @@
+.auth-div{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    font-family: "Times New Roman",
+}
+
+@media (max-width: 480px){
+    .auth-div{
+        max-width: 80%;
+        padding: 30px;
+    }
+}
