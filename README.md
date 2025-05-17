@@ -1,8 +1,3 @@
-Here's a clean and professional `README.md` file for your **Task Tracker** project, tailored to your requirements (PERN stack, auth, CRUD, project limit, Bootstrap UI, simple start instructions).
-
----
-
-````markdown
 # 🧩 Task Tracker
 
 A modern and minimal Task Tracker app built using the **PERN stack** (PostgreSQL, Express.js, React.js, Node.js). It supports user authentication, project/task management, and enforces a 4-project-per-user limit.
