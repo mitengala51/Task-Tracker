@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Auth.css'
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState();
@@ -8,6 +9,8 @@ export default function Auth() {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate()
 
   const [SignUpForm, setSignUpForm] = useState({
     full_name: "",
@@ -70,6 +73,9 @@ export default function Auth() {
       });
 
       console.log(result.data.message);
+      if(result.status == 200){
+        navigate('/Home')
+      }
     } catch (error) {
       console.log(error);
     }
@@ -87,6 +93,9 @@ export default function Auth() {
       });
 
       console.log(result.data.message);
+      if(result.status == 200){
+        navigate('/Home')
+      }
     } catch (error) {
       console.log(error);
     }

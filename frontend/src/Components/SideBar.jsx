@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
-export default function SideBar() {
+export default function SideBar({ height }) {
+  console.log(height)
   return (
-    <div style={{height: '100vh'}}>
+    <div style={{height}}>
       <div
         className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark h-100"
         style={{width: '280px'}}
       >
         {" "}
-        <a
-          href="/"
+        <Link
+          to="/Home"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
           {" "}
@@ -21,13 +23,13 @@ export default function SideBar() {
           >
           </svg>{" "}
           <span className="fs-4">Task Manager</span>{" "}
-        </a>{" "}
+        </Link>{" "}
         <hr />{" "}
         <ul className="nav nav-pills flex-column mb-auto">
           {" "}
           <li className="nav-item">
             {" "}
-            <a href="#" className="nav-link active" aria-current="page">
+            <Link to="/Home" className="nav-link active" aria-current="page">
               {" "}
               <svg
                 className="bi pe-none me-2"
@@ -38,11 +40,11 @@ export default function SideBar() {
 
               </svg>
               Home
-            </a>{" "}
+            </Link>{" "}
           </li>{" "}
           <li>
             {" "}
-            <a href="#" className="nav-link text-white">
+            <Link to='/projects' className="nav-link text-white">
               {" "}
               <svg
                 className="bi pe-none me-2"
@@ -53,7 +55,7 @@ export default function SideBar() {
 
               </svg>
               Projects
-            </a>{" "}
+            </Link>{" "}
           </li>{" "}
           <li>
             {" "}
